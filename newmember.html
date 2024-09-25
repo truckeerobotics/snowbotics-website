@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truckee Robotics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <canvas id="snowCanvas"></canvas>
+
+        <div class="content">
+            <form name="contact" method="POST" data-netlify="true" netlify>
+                <p>
+                    <label>Name: <br><input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Email: <br><input type="email" name="email" /></label>
+                </p>
+                <p>
+                    <label>Phone Number: <br><input type="tel" name="email" /></label>
+                </p>
+                <p>What are you hoping to do?</p>
+                <select id="country" name="country">
+                    <option value="engineering">Engineering</option>
+                    <option value="Coding">Coding</option>
+                    <option value="Other">Other (Grants, Marketing)</option>
+                </select>
+                <p>
+                    <br>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
