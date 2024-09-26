@@ -48,7 +48,6 @@ function createSnowflakes() {
 }
 
 function drawSnowflakes() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'rgb(32,32,32)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'white';

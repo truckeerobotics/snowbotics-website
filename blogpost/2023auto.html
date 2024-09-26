@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="blogstyle.css">
+</head>
+<body>
+    <header class="blog-header">
+        <!-- <button id="backButton" class="back-button">Back</button> -->
+        <div class="title-container">
+            <h1 class="post-title">FTC Centerstage Autonomous</h1>
+            <p class="post-author">by Jake Slye. Nov 25 2023</p>
+        </div>
+    </header>
+
+    <main class="post-content">
+        <p>For the autonomous period this season we embarked on coding a feature for our robot that utilizes computer vision. The goal was to create a system that could autonomously identify a block on the field, determine its exact location, and then maneuver the robot accordingly. This functionality was crucial for our performance in the FTC 2023 Centerstage competition, where precision and automation are key to scoring high during the autonomous section of the competition. The project involved integrating computer vision, programmed in Java, to create a seamless autonomous operation.</p>
+        <h3>Vision Processing and Block Detection</h3>
+        <p>The core of our system was the camera, which was mounted on the robot to capture the field of play. We used a Logitech C920x HD Pro Webcam for its reliability and compatibility with our existing hardware setup. The camera feed was processed using the built in FTC camera library, which allowed us to detect the block based on its color and angle from the robot.</p>
+        <p>The vision processing pipeline involved several steps:</p>
+        <ol>
+            <li><b>Image Acquisition:</b> The camera continuously captured frames, which were then saved to memory.</li>
+            <li><b>Filtering and Thresholding:</b> We applied thresholding to remove colors that weren't the color of the cubes and cropped the image to only include where the cubes could be.</li>
+            <li><b>Color Detection:</b> Using an algorithm we can determine where the cube is and its angle from the camera by simply looking for the largest group of colors that match the cube.</li>
+        </ol>
+        <p>The most challenging aspect of this phase was ensuring the system could reliably identify the block under varying lighting conditions and against different backgrounds. We spent significant time fine-tuning the parameters to optimize detection accuracy.</p>
+        <b>Autonomous Movement and Decision Making</b>
+        <p>Once the block's location was determined, the robot needed to decide on the next course of action. Depending on the block’s position, the robot was programmed to execute a series of predefined maneuvers. We defined three primary zones where the block could be detected: left, center, and right. The robot would then align itself with the cube, place a pixel on the designated spot based on the cube, then go over to the backboard and attempt to place another pixel on the correct column of the backboard.</p>
+        <b>Fine-Tuning and Testing</b>
+        <p>Testing was an iterative process. Initially, our robot had trouble aligning accurately with the block, often overshooting or misjudging distances. To address this, we refined the algorithms by calibrating the camera’s field of view and resolution to minimize distortions and adjusting the robot’s movement speeds to ensure smoother turns and stops.</p>
+        <p>During testing, we observed a significant improvement in our robot's ability to detect and act on block locations reliably. We also added fallback routines to handle situations where the block was not detected, allowing the robot to proceed with estimates on where the block should be.</p>
+        <b>Results and Future Improvements</b>
+        <p>The final implementation proved successful, allowing our robot to autonomously identify and navigate to blocks with perfect accuracy, however placing pixels on the backdrop was very inconsistent. In the Northern Nevada competition, our autonomous feature contributed to getting second placed alliance. </p>
+        <p>Looking forward, we aim to enhance the system by integrating more advanced machine learning techniques to improve detection accuracy further and allow the robot to make more complex decisions based on the block’s environment. </p>
+    </main>
+
+    <script src="blogscript.js"></script>
+</body>
+</html>
