@@ -53,6 +53,7 @@ body, html {
 }
 
 .post-content {
+    text-align: left;
     max-width: 80%;
     margin: 0 auto;
     padding: 20px 0;
