@@ -87,6 +87,10 @@ p {
     margin-bottom: 1.5rem;
 }
 
+a {
+    color: white;
+    text-decoration: none; /* no underline */
+}
 
 @media screen and (min-width: 800px) {
     .post-content {
