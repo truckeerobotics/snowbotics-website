@@ -1,5 +1,19 @@
 <!DOCTYPE html> 
 
+<script>
+  function inIframe () {
+      try {
+          return window.self !== window.top;
+      } catch (e) {
+          return true;
+      }
+  }
+
+  if(!inIframe()){
+    window.location.replace("https://snowbotics.club");
+  }
+</script>
+
 <html>
 <head>
   <title>Javascript Racer - v4 (final)</title>
